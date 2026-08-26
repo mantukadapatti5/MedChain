@@ -1,0 +1,18 @@
+{
+  "name": "drug-scm-backend",
+  "version": "1.0.0",
+  "description": "ML-Based Drug Inventory & Supply Chain Tracking System - Backend API",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "reseed": "node seed.js",
+    "train-model": "node ml/train.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

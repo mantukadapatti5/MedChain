@@ -1,0 +1,1338 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Regulatory Admin",
+      "email": "admin@gmail.com",
+      "passwordHash": "1764505e2238c3aa166bc063b9d8f0a593e40af56eb185e2e49c2bb61aa3dc54",
+      "role": "admin",
+      "mfaEnabled": true
+    },
+    {
+      "id": 2,
+      "name": "Metro Distribution Co.",
+      "email": "dis@gmail.com",
+      "passwordHash": "7105a715f5f40a13313c7f39980d814fc80f0a4db55d0382585554fba8842f76",
+      "role": "distributor",
+      "licenseVerified": true
+    },
+    {
+      "id": 3,
+      "name": "Sunrise Pharma Vendor",
+      "email": "vendor@gmail.com",
+      "passwordHash": "290b80fdc69aef62027d53bfe35c2966b9b297d01d7934005301e392ed86887c",
+      "role": "vendor",
+      "licenseVerified": true
+    },
+    {
+      "id": 4,
+      "name": "Cityview Pharmacy",
+      "email": "client1@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": true
+    },
+    {
+      "id": 5,
+      "name": "Green Valley Hospital",
+      "email": "client2@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": true
+    },
+    {
+      "id": 6,
+      "name": "Sunrise Community Clinic",
+      "email": "client3@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": true
+    },
+    {
+      "id": 7,
+      "name": "Lakeside Medical Institute",
+      "email": "client4@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": false
+    },
+    {
+      "id": 8,
+      "name": "Harborview Pharmacy",
+      "email": "client5@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": true
+    },
+    {
+      "id": 9,
+      "name": "St. Mary's Hospital",
+      "email": "client6@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": true
+    },
+    {
+      "id": 10,
+      "name": "Northgate Clinic",
+      "email": "client7@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": true
+    },
+    {
+      "id": 11,
+      "name": "Riverside Institution",
+      "email": "client8@gmail.com",
+      "passwordHash": "a2d9d525fb57a7f9477e5b34dc37004b5190b8184b6e2fe0f68da7491edf7661",
+      "role": "client",
+      "licenseVerified": false
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "userId": 4,
+      "name": "Cityview Pharmacy",
+      "type": "Pharmacy",
+      "region": "North Zone",
+      "contactPerson": "R. Mehta",
+      "phone": "+91-98000-11111",
+      "email": "client1@gmail.com",
+      "licenseVerified": true,
+      "onboardedAt": "2026-07-17T06:49:49.861Z"
+    },
+    {
+      "id": 2,
+      "userId": 5,
+      "name": "Green Valley Hospital",
+      "type": "Hospital",
+      "region": "South Zone",
+      "contactPerson": "Dr. A. Rao",
+      "phone": "+91-98000-22222",
+      "email": "client2@gmail.com",
+      "licenseVerified": true,
+      "onboardedAt": "2026-07-19T06:49:49.861Z"
+    },
+    {
+      "id": 3,
+      "userId": 6,
+      "name": "Sunrise Community Clinic",
+      "type": "Clinic",
+      "region": "East Zone",
+      "contactPerson": "Dr. S. Iyer",
+      "phone": "+91-98000-33333",
+      "email": "client3@gmail.com",
+      "licenseVerified": true,
+      "onboardedAt": "2026-07-27T06:49:49.861Z"
+    },
+    {
+      "id": 4,
+      "userId": 7,
+      "name": "Lakeside Medical Institute",
+      "type": "Institution",
+      "region": "West Zone",
+      "contactPerson": "K. Nair",
+      "phone": "+91-98000-44444",
+      "email": "client4@gmail.com",
+      "licenseVerified": false,
+      "onboardedAt": "2026-08-21T06:49:49.861Z"
+    },
+    {
+      "id": 5,
+      "userId": 8,
+      "name": "Harborview Pharmacy",
+      "type": "Pharmacy",
+      "region": "South Zone",
+      "contactPerson": "P. Sharma",
+      "phone": "+91-98000-55555",
+      "email": "client5@gmail.com",
+      "licenseVerified": true,
+      "onboardedAt": "2026-08-01T06:49:49.861Z"
+    },
+    {
+      "id": 6,
+      "userId": 9,
+      "name": "St. Mary's Hospital",
+      "type": "Hospital",
+      "region": "North Zone",
+      "contactPerson": "Dr. L. Fernandes",
+      "phone": "+91-98000-66666",
+      "email": "client6@gmail.com",
+      "licenseVerified": true,
+      "onboardedAt": "2026-07-24T06:49:49.861Z"
+    },
+    {
+      "id": 7,
+      "userId": 10,
+      "name": "Northgate Clinic",
+      "type": "Clinic",
+      "region": "North Zone",
+      "contactPerson": "Dr. M. Verma",
+      "phone": "+91-98000-77777",
+      "email": "client7@gmail.com",
+      "licenseVerified": true,
+      "onboardedAt": "2026-08-06T06:49:49.861Z"
+    },
+    {
+      "id": 8,
+      "userId": 11,
+      "name": "Riverside Institution",
+      "type": "Institution",
+      "region": "East Zone",
+      "contactPerson": "T. Das",
+      "phone": "+91-98000-88888",
+      "email": "client8@gmail.com",
+      "licenseVerified": false,
+      "onboardedAt": "2026-08-24T06:49:49.861Z"
+    }
+  ],
+  "clientRequests": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "clientName": "Cityview Pharmacy",
+      "drugName": "Paracetamol 500mg",
+      "qtyRequested": 80,
+      "region": "North Zone",
+      "priority": "routine",
+      "status": "received",
+      "createdAt": "2026-08-17T06:49:49.861Z",
+      "approvedAt": "2026-08-18T06:49:49.861Z",
+      "dispatchedAt": "2026-08-18T06:49:49.861Z",
+      "receivedAt": "2026-08-19T06:49:49.861Z",
+      "qtyDispatched": 80,
+      "qtyReceived": 80,
+      "batchesAllocated": [
+        {
+          "batch": "PCM-2603",
+          "qty": 80,
+          "expiryDate": "2027-05-13",
+          "unitPrice": 1.45,
+          "coldChain": false
+        }
+      ],
+      "gpsLog": [
+        {
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timestamp": "2026-08-18T06:49:49.861Z",
+          "label": "Departed Distributor Hub"
+        },
+        {
+          "lat": 12.99,
+          "lng": 77.61,
+          "timestamp": "2026-08-19T06:49:49.861Z",
+          "label": "Arrived at Cityview Pharmacy"
+        }
+      ],
+      "coldChainLog": [],
+      "rejectionReason": null
+    },
+    {
+      "id": 2,
+      "clientId": 2,
+      "clientName": "Green Valley Hospital",
+      "drugName": "Insulin Glargine 100IU",
+      "qtyRequested": 20,
+      "region": "South Zone",
+      "priority": "critical",
+      "status": "dispatched",
+      "createdAt": "2026-08-25T02:01:49.861Z",
+      "approvedAt": "2026-08-25T11:37:49.861Z",
+      "dispatchedAt": "2026-08-25T11:37:49.861Z",
+      "receivedAt": null,
+      "qtyDispatched": 20,
+      "qtyReceived": null,
+      "batchesAllocated": [
+        {
+          "batch": "INS-7742-B",
+          "qty": 20,
+          "expiryDate": "2026-09-01",
+          "unitPrice": 18.75,
+          "coldChain": true
+        }
+      ],
+      "gpsLog": [
+        {
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timestamp": "2026-08-25T11:37:49.861Z",
+          "label": "Departed Distributor Hub"
+        }
+      ],
+      "coldChainLog": [
+        {
+          "temp": 5,
+          "humidity": 40,
+          "timestamp": "2026-08-25T11:37:49.861Z",
+          "alert": false
+        }
+      ],
+      "rejectionReason": null
+    },
+    {
+      "id": 3,
+      "clientId": 6,
+      "clientName": "St. Mary's Hospital",
+      "drugName": "Azithromycin 500mg",
+      "qtyRequested": 150,
+      "region": "North Zone",
+      "priority": "urgent",
+      "status": "pending",
+      "createdAt": "2026-08-25T23:37:49.861Z",
+      "approvedAt": null,
+      "dispatchedAt": null,
+      "receivedAt": null,
+      "qtyDispatched": null,
+      "qtyReceived": null,
+      "batchesAllocated": [],
+      "gpsLog": [],
+      "coldChainLog": [],
+      "rejectionReason": null
+    },
+    {
+      "id": 4,
+      "clientId": 5,
+      "clientName": "Harborview Pharmacy",
+      "drugName": "Metformin 500mg",
+      "qtyRequested": 60,
+      "region": "South Zone",
+      "priority": "routine",
+      "status": "received",
+      "createdAt": "2026-08-12T06:49:49.861Z",
+      "approvedAt": "2026-08-13T06:49:49.861Z",
+      "dispatchedAt": "2026-08-13T06:49:49.861Z",
+      "receivedAt": "2026-08-14T06:49:49.861Z",
+      "qtyDispatched": 60,
+      "qtyReceived": 50,
+      "batchesAllocated": [
+        {
+          "batch": "MET-3350",
+          "qty": 60,
+          "expiryDate": "2027-07-22",
+          "unitPrice": 1.1,
+          "coldChain": false
+        }
+      ],
+      "gpsLog": [
+        {
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timestamp": "2026-08-13T06:49:49.861Z",
+          "label": "Departed Distributor Hub"
+        },
+        {
+          "lat": 12.95,
+          "lng": 77.58,
+          "timestamp": "2026-08-14T06:49:49.861Z",
+          "label": "Arrived at Harborview Pharmacy"
+        }
+      ],
+      "coldChainLog": [],
+      "rejectionReason": null
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "name": "North Zone"
+    },
+    {
+      "id": 2,
+      "name": "South Zone"
+    },
+    {
+      "id": 3,
+      "name": "East Zone"
+    },
+    {
+      "id": 4,
+      "name": "West Zone"
+    }
+  ],
+  "vendorInventory": [
+    {
+      "id": 1,
+      "drugName": "Paracetamol 500mg",
+      "category": "Analgesic",
+      "batch": "PCM-2603",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 420,
+      "reorderPoint": 150,
+      "unitPrice": 1.2,
+      "expiryDate": "2027-05-13",
+      "coldChain": false,
+      "provenanceChecksum": "18860944b4"
+    },
+    {
+      "id": 2,
+      "drugName": "Paracetamol 500mg",
+      "category": "Analgesic",
+      "batch": "PCM-2410",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 300,
+      "reorderPoint": 150,
+      "unitPrice": 1.2,
+      "expiryDate": "2026-09-09",
+      "coldChain": false,
+      "provenanceChecksum": "731ed9a6b9"
+    },
+    {
+      "id": 3,
+      "drugName": "Amoxicillin 250mg",
+      "category": "Antibiotic",
+      "batch": "AMX-1187",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 240,
+      "reorderPoint": 120,
+      "unitPrice": 2.5,
+      "expiryDate": "2026-09-16",
+      "coldChain": false,
+      "provenanceChecksum": "4a8f6ccd4a"
+    },
+    {
+      "id": 4,
+      "drugName": "Insulin Glargine 100IU",
+      "category": "Hormone",
+      "batch": "INS-7742",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 60,
+      "reorderPoint": 40,
+      "unitPrice": 18.75,
+      "expiryDate": "2026-09-01",
+      "coldChain": true,
+      "provenanceChecksum": "c6bcb962cd"
+    },
+    {
+      "id": 5,
+      "drugName": "Azithromycin 500mg",
+      "category": "Antibiotic",
+      "batch": "AZI-4410",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 210,
+      "reorderPoint": 100,
+      "unitPrice": 3.8,
+      "expiryDate": "2027-01-23",
+      "coldChain": false,
+      "provenanceChecksum": "TAMPERED0X9"
+    },
+    {
+      "id": 6,
+      "drugName": "Ceftriaxone 1g Injection",
+      "category": "Antibiotic",
+      "batch": "CFX-2299",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 100,
+      "reorderPoint": 50,
+      "unitPrice": 6.4,
+      "expiryDate": "2026-12-09",
+      "coldChain": true,
+      "provenanceChecksum": "12eb5dc696"
+    },
+    {
+      "id": 7,
+      "drugName": "ORS Sachets",
+      "category": "Rehydration",
+      "batch": "ORS-0091",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 500,
+      "reorderPoint": 200,
+      "unitPrice": 0.4,
+      "expiryDate": "2027-11-19",
+      "coldChain": false,
+      "provenanceChecksum": "951ee3948d"
+    }
+  ],
+  "distributorInventory": [
+    {
+      "id": 1,
+      "drugName": "Paracetamol 500mg",
+      "category": "Analgesic",
+      "batch": "PCM-2603",
+      "manufacturer": "Sunrise Pharma",
+      "region": "North Zone",
+      "stock": 160,
+      "reorderPoint": 100,
+      "unitPrice": 1.45,
+      "expiryDate": "2027-05-13",
+      "coldChain": false,
+      "provenanceChecksum": "18860944b4"
+    },
+    {
+      "id": 2,
+      "drugName": "Amoxicillin 250mg",
+      "category": "Antibiotic",
+      "batch": "AMX-1187",
+      "manufacturer": "Sunrise Pharma",
+      "region": "North Zone",
+      "stock": 40,
+      "reorderPoint": 80,
+      "unitPrice": 2.9,
+      "expiryDate": "2026-09-16",
+      "coldChain": false,
+      "provenanceChecksum": "4a8f6ccd4a"
+    },
+    {
+      "id": 3,
+      "drugName": "Metformin 500mg",
+      "category": "Antidiabetic",
+      "batch": "MET-3350",
+      "manufacturer": "Sunrise Pharma",
+      "region": "South Zone",
+      "stock": 300,
+      "reorderPoint": 120,
+      "unitPrice": 1.1,
+      "expiryDate": "2027-07-22",
+      "coldChain": false,
+      "provenanceChecksum": "047882cc26"
+    },
+    {
+      "id": 4,
+      "drugName": "Paracetamol 500mg",
+      "category": "Analgesic",
+      "batch": "PCM-OLD01",
+      "manufacturer": "Sunrise Pharma",
+      "region": "South Zone",
+      "stock": 20,
+      "reorderPoint": 100,
+      "unitPrice": 1.45,
+      "expiryDate": "2026-09-03",
+      "coldChain": false,
+      "provenanceChecksum": "8efb7f55fc"
+    },
+    {
+      "id": 5,
+      "drugName": "Insulin Glargine 100IU",
+      "category": "Hormone",
+      "batch": "INS-7742-B",
+      "manufacturer": "Sunrise Pharma",
+      "region": "South Zone",
+      "stock": 5,
+      "reorderPoint": 20,
+      "unitPrice": 18.75,
+      "expiryDate": "2026-09-01",
+      "coldChain": true,
+      "provenanceChecksum": "7412e795c2"
+    }
+  ],
+  "stockRequests": [
+    {
+      "id": 1,
+      "drugName": "Amoxicillin 250mg",
+      "qtyRequested": 200,
+      "region": "North Zone",
+      "priority": "routine",
+      "status": "received",
+      "requestedBy": "distributor",
+      "createdAt": "2026-08-14T06:49:49.861Z",
+      "approvedAt": "2026-08-15T06:49:49.861Z",
+      "dispatchedAt": "2026-08-15T06:49:49.861Z",
+      "receivedAt": "2026-08-17T06:49:49.861Z",
+      "qtyDispatched": 200,
+      "qtyReceived": 200,
+      "batchesAllocated": [
+        {
+          "batch": "AMX-1187",
+          "qty": 200,
+          "expiryDate": "2026-09-16",
+          "unitPrice": 2.5,
+          "coldChain": false
+        }
+      ],
+      "gpsLog": [
+        {
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timestamp": "2026-08-15T06:49:49.861Z",
+          "label": "Departed Vendor Warehouse"
+        },
+        {
+          "lat": 13.0827,
+          "lng": 80.2707,
+          "timestamp": "2026-08-17T06:49:49.861Z",
+          "label": "Arrived Distributor Hub"
+        }
+      ],
+      "coldChainLog": [],
+      "rejectionReason": null
+    },
+    {
+      "id": 2,
+      "drugName": "Insulin Glargine 100IU",
+      "qtyRequested": 50,
+      "region": "South Zone",
+      "priority": "urgent",
+      "status": "dispatched",
+      "requestedBy": "distributor",
+      "createdAt": "2026-08-23T06:49:49.861Z",
+      "approvedAt": "2026-08-24T06:49:49.861Z",
+      "dispatchedAt": "2026-08-24T06:49:49.861Z",
+      "receivedAt": null,
+      "qtyDispatched": 50,
+      "qtyReceived": null,
+      "batchesAllocated": [
+        {
+          "batch": "INS-7742",
+          "qty": 50,
+          "expiryDate": "2026-09-01",
+          "unitPrice": 18.75,
+          "coldChain": true
+        }
+      ],
+      "gpsLog": [
+        {
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timestamp": "2026-08-24T06:49:49.861Z",
+          "label": "Departed Vendor Warehouse"
+        },
+        {
+          "lat": 13.01,
+          "lng": 78.4,
+          "timestamp": "2026-08-25T06:49:49.861Z",
+          "label": "In Transit - Highway Checkpoint"
+        }
+      ],
+      "coldChainLog": [
+        {
+          "temp": 5.1,
+          "humidity": 42,
+          "timestamp": "2026-08-24T06:49:49.861Z",
+          "alert": false
+        },
+        {
+          "temp": 4.8,
+          "humidity": 40,
+          "timestamp": "2026-08-25T06:49:49.861Z",
+          "alert": false
+        }
+      ],
+      "rejectionReason": null
+    },
+    {
+      "id": 3,
+      "drugName": "Ceftriaxone 1g Injection",
+      "qtyRequested": 100,
+      "region": "North Zone",
+      "priority": "critical",
+      "status": "pending",
+      "requestedBy": "distributor",
+      "createdAt": "2026-08-25T21:13:49.861Z",
+      "approvedAt": null,
+      "dispatchedAt": null,
+      "receivedAt": null,
+      "qtyDispatched": null,
+      "qtyReceived": null,
+      "batchesAllocated": [],
+      "gpsLog": [],
+      "coldChainLog": [],
+      "rejectionReason": null
+    },
+    {
+      "id": 4,
+      "drugName": "Paracetamol 500mg",
+      "qtyRequested": 150,
+      "region": "South Zone",
+      "priority": "routine",
+      "status": "received",
+      "requestedBy": "distributor",
+      "createdAt": "2026-08-06T06:49:49.861Z",
+      "approvedAt": "2026-08-07T06:49:49.861Z",
+      "dispatchedAt": "2026-08-07T06:49:49.861Z",
+      "receivedAt": "2026-08-09T06:49:49.861Z",
+      "qtyDispatched": 150,
+      "qtyReceived": 130,
+      "batchesAllocated": [
+        {
+          "batch": "PCM-2410",
+          "qty": 150,
+          "expiryDate": "2026-09-09",
+          "unitPrice": 1.2,
+          "coldChain": false
+        }
+      ],
+      "gpsLog": [
+        {
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timestamp": "2026-08-07T06:49:49.861Z",
+          "label": "Departed Vendor Warehouse"
+        },
+        {
+          "lat": 13.0827,
+          "lng": 80.2707,
+          "timestamp": "2026-08-09T06:49:49.861Z",
+          "label": "Arrived Distributor Hub"
+        }
+      ],
+      "coldChainLog": [],
+      "rejectionReason": null
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "qty": 60,
+      "unitPrice": 1.45,
+      "amount": 87,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-11T06:49:49.861Z"
+    },
+    {
+      "id": 2,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "qty": 55,
+      "unitPrice": 1.45,
+      "amount": 79.75,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-16T06:49:49.861Z"
+    },
+    {
+      "id": 3,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "qty": 70,
+      "unitPrice": 1.45,
+      "amount": 101.5,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-21T06:49:49.861Z"
+    },
+    {
+      "id": 17,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "qty": 65,
+      "unitPrice": 1.45,
+      "amount": 94.25,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-14T06:49:49.861Z"
+    },
+    {
+      "id": 18,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "qty": 58,
+      "unitPrice": 1.45,
+      "amount": 84.1,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-18T06:49:49.861Z"
+    },
+    {
+      "id": 19,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "qty": 72,
+      "unitPrice": 1.45,
+      "amount": 104.4,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-23T06:49:49.861Z"
+    },
+    {
+      "id": 4,
+      "drugName": "Amoxicillin 250mg",
+      "batch": "AMX-1187",
+      "qty": 30,
+      "unitPrice": 2.9,
+      "amount": 87,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-13T06:49:49.861Z"
+    },
+    {
+      "id": 5,
+      "drugName": "Amoxicillin 250mg",
+      "batch": "AMX-1187",
+      "qty": 35,
+      "unitPrice": 2.9,
+      "amount": 101.5,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-20T06:49:49.861Z"
+    },
+    {
+      "id": 20,
+      "drugName": "Amoxicillin 250mg",
+      "batch": "AMX-1187",
+      "qty": 28,
+      "unitPrice": 2.9,
+      "amount": 81.2,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-15T06:49:49.861Z"
+    },
+    {
+      "id": 21,
+      "drugName": "Amoxicillin 250mg",
+      "batch": "AMX-1187",
+      "qty": 32,
+      "unitPrice": 2.9,
+      "amount": 92.8,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-17T06:49:49.861Z"
+    },
+    {
+      "id": 22,
+      "drugName": "Amoxicillin 250mg",
+      "batch": "AMX-1187",
+      "qty": 33,
+      "unitPrice": 2.9,
+      "amount": 95.7,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-22T06:49:49.861Z"
+    },
+    {
+      "id": 6,
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "qty": 90,
+      "unitPrice": 1.1,
+      "amount": 99,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-17T06:49:49.861Z"
+    },
+    {
+      "id": 7,
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "qty": 85,
+      "unitPrice": 1.1,
+      "amount": 93.5,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-24T06:49:49.861Z"
+    },
+    {
+      "id": 23,
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "qty": 88,
+      "unitPrice": 1.1,
+      "amount": 96.8,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-12T06:49:49.861Z"
+    },
+    {
+      "id": 24,
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "qty": 92,
+      "unitPrice": 1.1,
+      "amount": 101.2,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-19T06:49:49.861Z"
+    },
+    {
+      "id": 25,
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "qty": 86,
+      "unitPrice": 1.1,
+      "amount": 94.6,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-25T06:49:49.861Z"
+    },
+    {
+      "id": 26,
+      "drugName": "Insulin Glargine 100IU",
+      "batch": "INS-7742",
+      "qty": 11,
+      "unitPrice": 18.75,
+      "amount": 206.25,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-10T06:49:49.861Z"
+    },
+    {
+      "id": 27,
+      "drugName": "Insulin Glargine 100IU",
+      "batch": "INS-7742",
+      "qty": 13,
+      "unitPrice": 18.75,
+      "amount": 243.75,
+      "buyer": "St. Mary's Hospital",
+      "date": "2026-08-16T06:49:49.861Z"
+    },
+    {
+      "id": 28,
+      "drugName": "Insulin Glargine 100IU",
+      "batch": "INS-7742",
+      "qty": 12,
+      "unitPrice": 18.75,
+      "amount": 225,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-21T06:49:49.861Z"
+    },
+    {
+      "id": 35,
+      "drugName": "Insulin Glargine 100IU",
+      "batch": "INS-7742",
+      "qty": 12,
+      "unitPrice": 18.75,
+      "amount": 225,
+      "buyer": "St. Mary's Hospital",
+      "date": "2026-08-13T06:49:49.861Z"
+    },
+    {
+      "id": 36,
+      "drugName": "Insulin Glargine 100IU",
+      "batch": "INS-7742",
+      "qty": 11,
+      "unitPrice": 18.75,
+      "amount": 206.25,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-24T06:49:49.861Z"
+    },
+    {
+      "id": 29,
+      "drugName": "Ceftriaxone 1g Injection",
+      "batch": "CFX-2299",
+      "qty": 9,
+      "unitPrice": 6.4,
+      "amount": 57.6,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-12T06:49:49.861Z"
+    },
+    {
+      "id": 30,
+      "drugName": "Ceftriaxone 1g Injection",
+      "batch": "CFX-2299",
+      "qty": 11,
+      "unitPrice": 6.4,
+      "amount": 70.4,
+      "buyer": "St. Mary's Hospital",
+      "date": "2026-08-18T06:49:49.861Z"
+    },
+    {
+      "id": 31,
+      "drugName": "Ceftriaxone 1g Injection",
+      "batch": "CFX-2299",
+      "qty": 10,
+      "unitPrice": 6.4,
+      "amount": 64,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-23T06:49:49.861Z"
+    },
+    {
+      "id": 37,
+      "drugName": "Ceftriaxone 1g Injection",
+      "batch": "CFX-2299",
+      "qty": 10,
+      "unitPrice": 6.4,
+      "amount": 64,
+      "buyer": "St. Mary's Hospital",
+      "date": "2026-08-15T06:49:49.861Z"
+    },
+    {
+      "id": 38,
+      "drugName": "Ceftriaxone 1g Injection",
+      "batch": "CFX-2299",
+      "qty": 9,
+      "unitPrice": 6.4,
+      "amount": 57.6,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-25T06:49:49.861Z"
+    },
+    {
+      "id": 32,
+      "drugName": "ORS Sachets",
+      "batch": "ORS-0091",
+      "qty": 58,
+      "unitPrice": 0.4,
+      "amount": 23.2,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-14T06:49:49.861Z"
+    },
+    {
+      "id": 33,
+      "drugName": "ORS Sachets",
+      "batch": "ORS-0091",
+      "qty": 62,
+      "unitPrice": 0.4,
+      "amount": 24.8,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-20T06:49:49.861Z"
+    },
+    {
+      "id": 34,
+      "drugName": "ORS Sachets",
+      "batch": "ORS-0091",
+      "qty": 55,
+      "unitPrice": 0.4,
+      "amount": 22,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-24T06:49:49.861Z"
+    },
+    {
+      "id": 39,
+      "drugName": "ORS Sachets",
+      "batch": "ORS-0091",
+      "qty": 60,
+      "unitPrice": 0.4,
+      "amount": 24,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-17T06:49:49.861Z"
+    },
+    {
+      "id": 40,
+      "drugName": "ORS Sachets",
+      "batch": "ORS-0091",
+      "qty": 57,
+      "unitPrice": 0.4,
+      "amount": 22.8,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-22T06:49:49.861Z"
+    },
+    {
+      "id": 8,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 8,
+      "unitPrice": 3.8,
+      "amount": 30.4,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-09T06:49:49.861Z"
+    },
+    {
+      "id": 9,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 7,
+      "unitPrice": 3.8,
+      "amount": 26.6,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-11T06:49:49.861Z"
+    },
+    {
+      "id": 10,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 9,
+      "unitPrice": 3.8,
+      "amount": 34.2,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-13T06:49:49.861Z"
+    },
+    {
+      "id": 11,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 6,
+      "unitPrice": 3.8,
+      "amount": 22.8,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-15T06:49:49.861Z"
+    },
+    {
+      "id": 12,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 8,
+      "unitPrice": 3.8,
+      "amount": 30.4,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-17T06:49:49.861Z"
+    },
+    {
+      "id": 13,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 7,
+      "unitPrice": 3.8,
+      "amount": 26.6,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-19T06:49:49.861Z"
+    },
+    {
+      "id": 14,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 5,
+      "unitPrice": 3.8,
+      "amount": 19,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-21T06:49:49.861Z"
+    },
+    {
+      "id": 15,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 95,
+      "unitPrice": 3.8,
+      "amount": 361,
+      "buyer": "Green Valley Hospital",
+      "date": "2026-08-24T18:49:49.861Z"
+    },
+    {
+      "id": 16,
+      "drugName": "Azithromycin 500mg",
+      "batch": "AZI-4410",
+      "qty": 120,
+      "unitPrice": 3.8,
+      "amount": 456,
+      "buyer": "Cityview Pharmacy",
+      "date": "2026-08-25T18:49:49.861Z"
+    }
+  ],
+  "billing": [
+    {
+      "id": 1,
+      "requestId": 1,
+      "drugName": "Amoxicillin 250mg",
+      "amount": 500,
+      "status": "paid",
+      "date": "2026-08-15T06:49:49.861Z"
+    },
+    {
+      "id": 2,
+      "requestId": 2,
+      "drugName": "Insulin Glargine 100IU",
+      "amount": 937.5,
+      "status": "pending",
+      "date": "2026-08-24T06:49:49.861Z"
+    },
+    {
+      "id": 3,
+      "requestId": 4,
+      "drugName": "Paracetamol 500mg",
+      "amount": 180,
+      "status": "paid",
+      "date": "2026-08-07T06:49:49.861Z"
+    }
+  ],
+  "anomalies": [
+    {
+      "id": 1,
+      "type": "quantity-mismatch",
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2410",
+      "severity": "medium",
+      "detectedAt": "2026-08-09T06:49:49.861Z",
+      "status": "open",
+      "source": "distributor",
+      "message": "Stock request #4: 150 units dispatched but only 130 confirmed received (13.3% shortfall)."
+    },
+    {
+      "id": 2,
+      "type": "quantity-mismatch",
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "severity": "medium",
+      "detectedAt": "2026-08-14T06:49:49.861Z",
+      "status": "open",
+      "source": "client",
+      "message": "Client request #4 (Harborview Pharmacy): 60 units dispatched but only 50 confirmed received (16.7% shortfall)."
+    }
+  ],
+  "coldChainLogs": [
+    {
+      "id": 1,
+      "portal": "vendor",
+      "batch": "INS-7742",
+      "temp": 4.9,
+      "humidity": 39,
+      "timestamp": "2026-08-20T06:49:49.861Z",
+      "alert": false
+    },
+    {
+      "id": 2,
+      "portal": "vendor",
+      "batch": "INS-7742",
+      "temp": 5.3,
+      "humidity": 41,
+      "timestamp": "2026-08-23T06:49:49.861Z",
+      "alert": false
+    },
+    {
+      "id": 3,
+      "portal": "vendor",
+      "batch": "CFX-2299",
+      "temp": 6.1,
+      "humidity": 44,
+      "timestamp": "2026-08-22T06:49:49.861Z",
+      "alert": false
+    },
+    {
+      "id": 4,
+      "portal": "distributor",
+      "batch": "INS-7742",
+      "temp": 5.1,
+      "humidity": 42,
+      "timestamp": "2026-08-24T06:49:49.861Z",
+      "alert": false
+    },
+    {
+      "id": 5,
+      "portal": "distributor",
+      "batch": "INS-7742",
+      "temp": 4.8,
+      "humidity": 40,
+      "timestamp": "2026-08-25T06:49:49.861Z",
+      "alert": false
+    }
+  ],
+  "supplierPerformance": [
+    {
+      "vendorName": "Sunrise Pharma Vendor",
+      "onTimeDeliveryRate": 92,
+      "qualityScore": 4.6,
+      "avgResponseHours": 5.2,
+      "ordersFulfilled": 38
+    }
+  ],
+  "settings": {
+    "emergencyMode": false,
+    "updatedAt": null,
+    "updatedBy": null
+  },
+  "recalls": [],
+  "productionRuns": [
+    {
+      "id": 1,
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2410",
+      "qtyProduced": 220,
+      "stockBefore": 80,
+      "stockAfter": 300,
+      "reason": "routine replenishment",
+      "triggeredBy": "smart-contract",
+      "emergencyMode": false,
+      "createdAt": "2026-08-26T07:22:47.980Z"
+    },
+    {
+      "id": 2,
+      "drugName": "Amoxicillin 250mg",
+      "batch": "AMX-1187",
+      "qtyProduced": 150,
+      "stockBefore": 90,
+      "stockAfter": 240,
+      "reason": "routine replenishment",
+      "triggeredBy": "smart-contract",
+      "emergencyMode": false,
+      "createdAt": "2026-08-26T07:22:47.981Z"
+    },
+    {
+      "id": 3,
+      "drugName": "Ceftriaxone 1g Injection",
+      "batch": "CFX-2299",
+      "qtyProduced": 65,
+      "stockBefore": 35,
+      "stockAfter": 100,
+      "reason": "routine replenishment",
+      "triggeredBy": "smart-contract",
+      "emergencyMode": false,
+      "createdAt": "2026-08-26T07:22:47.981Z"
+    }
+  ],
+  "clientInventory": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "clientName": "Cityview Pharmacy",
+      "drugName": "Paracetamol 500mg",
+      "batch": "PCM-2603",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 80,
+      "reorderPoint": 10,
+      "unitPrice": 1.45,
+      "expiryDate": "2027-05-13",
+      "coldChain": false,
+      "provenanceChecksum": "18860944b4"
+    },
+    {
+      "id": 2,
+      "clientId": 5,
+      "clientName": "Harborview Pharmacy",
+      "drugName": "Metformin 500mg",
+      "batch": "MET-3350",
+      "manufacturer": "Sunrise Pharma",
+      "stock": 50,
+      "reorderPoint": 10,
+      "unitPrice": 1.1,
+      "expiryDate": "2027-07-22",
+      "coldChain": false,
+      "provenanceChecksum": "047882cc26"
+    }
+  ],
+  "clientUsageLog": [],
+  "blockchain": [
+    {
+      "index": 0,
+      "timestamp": "2026-01-01T00:00:00.000Z",
+      "type": "GENESIS",
+      "actor": "system",
+      "data": {
+        "message": "Drug Supply Chain Ledger Initialized"
+      },
+      "prevHash": "0",
+      "hash": "0f9fefa78a74d73d1613c13921c4b588dd21d245b8f666d1ca78adbe97429769"
+    },
+    {
+      "index": 1,
+      "timestamp": "2026-08-26T07:22:47.981Z",
+      "type": "SMART_CONTRACT_AUTO_PROCURE",
+      "actor": "system:smart-contract",
+      "data": {
+        "portal": "vendor",
+        "productionRunId": 1,
+        "drugName": "Paracetamol 500mg",
+        "batch": "PCM-2410",
+        "qty": 220,
+        "emergencyMode": false,
+        "surge": {
+          "isSurge": false,
+          "ratio": 0,
+          "recentAvgPerDay": 0,
+          "baselineAvgPerDay": 27.1
+        },
+        "reason": "Stock 80 <= reorder point 150"
+      },
+      "prevHash": "0f9fefa78a74d73d1613c13921c4b588dd21d245b8f666d1ca78adbe97429769",
+      "hash": "4338324ff2154223b621772740b04d0f1034d11538f429c91cb71dc8d5f8f47c"
+    },
+    {
+      "index": 2,
+      "timestamp": "2026-08-26T07:22:47.981Z",
+      "type": "SMART_CONTRACT_AUTO_PROCURE",
+      "actor": "system:smart-contract",
+      "data": {
+        "portal": "vendor",
+        "productionRunId": 2,
+        "drugName": "Amoxicillin 250mg",
+        "batch": "AMX-1187",
+        "qty": 150,
+        "emergencyMode": false,
+        "surge": {
+          "isSurge": false,
+          "ratio": 0,
+          "recentAvgPerDay": 0,
+          "baselineAvgPerDay": 11.3
+        },
+        "reason": "Stock 90 <= reorder point 120"
+      },
+      "prevHash": "4338324ff2154223b621772740b04d0f1034d11538f429c91cb71dc8d5f8f47c",
+      "hash": "2d3148e343bb06205efa8a7e9532f931f86539da87aa4b0aafa6038233b3dfef"
+    },
+    {
+      "index": 3,
+      "timestamp": "2026-08-26T07:22:47.981Z",
+      "type": "SMART_CONTRACT_AUTO_PROCURE",
+      "actor": "system:smart-contract",
+      "data": {
+        "portal": "vendor",
+        "productionRunId": 3,
+        "drugName": "Ceftriaxone 1g Injection",
+        "batch": "CFX-2299",
+        "qty": 65,
+        "emergencyMode": false,
+        "surge": {
+          "isSurge": false,
+          "ratio": 1.05,
+          "recentAvgPerDay": 3,
+          "baselineAvgPerDay": 2.9
+        },
+        "reason": "Stock 35 <= reorder point 50"
+      },
+      "prevHash": "2d3148e343bb06205efa8a7e9532f931f86539da87aa4b0aafa6038233b3dfef",
+      "hash": "38da64dfa37c43285d0ac52b1b7ea5c07f626ea2b9d2a7a7a1e3d4ddd059c6c1"
+    }
+  ]
+}
