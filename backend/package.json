@@ -8,12 +8,12 @@
     "start": "node server.js",
     "dev": "node server.js",
     "reseed": "node seed.js",
-    "train-model": "node ml/train.js",
+    "train-model": "node ml/train.js && node ml/trainShortage.js",
     "train-shortage-model": "node ml/trainShortage.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.0"
   }
 }
