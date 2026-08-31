@@ -5,6 +5,7 @@ const eventBus = require("./utils/eventBus");
 const { verifyToken, requireRole } = require("./middleware/auth");
 const { issueTicket, consumeTicket } = require("./utils/sseTickets");
 const { scanInventoryWithIsolationForest } = require("./ml/anomalyDetector");
+const { calculateShipmentTracking } = require("./utils/geo");
 
 load(); // initialize JSON "database" + blockchain ledger
 
@@ -21,7 +22,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// simple request log — useful while wiring up portal-to-portal flows
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} ${req.method} ${req.path}`);
   next();
@@ -31,16 +31,13 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok", service: "drug-scm-backend", time: new Date().toISOString() });
 });
 
-// ---------- Real-time push (Server-Sent Events) ----------
 app.post("/api/events/ticket", verifyToken, (req, res) => {
   res.json({ ticket: issueTicket(req.user) });
 });
 
 app.get("/api/events", (req, res) => {
   const user = consumeTicket(req.query.ticket || "");
-  if (!user) {
-    return res.status(401).end();
-  }
+  if (!user) return res.status(401).end();
 
   res.writeHead(200, {
     "Content-Type": "text/event-stream",
@@ -60,11 +57,6 @@ app.get("/api/events", (req, res) => {
 });
 
 // ---------- Level 1: real Isolation Forest anomaly scan ----------
-// This route intentionally sits before the existing admin router so the
-// existing Admin "Run ML Anomaly Scan" button now executes the real model.
-// Existing deterministic checks remain available elsewhere for expiry,
-// counterfeit and compliance-specific rules; this ML scan adds a learned
-// unsupervised anomaly signal instead of replacing those safety checks.
 app.post("/api/admin/anomalies/scan", verifyToken, requireRole("admin"), (req, res) => {
   const db = getDB();
   const inventories = [
@@ -130,6 +122,18 @@ app.post("/api/admin/anomalies/scan", verifyToken, requireRole("admin"), (req, r
   });
 });
 
+// ---------- Level 1: GPS distance + ETA ----------
+// Uses the existing simulated GPS trail. No hardware or external maps API is
+// required: distance is calculated with the Haversine formula and ETA is
+// derived from the observed GPS speed, with a documented fallback speed when
+// timestamps are too close to infer a reliable speed.
+app.get("/api/distributor/stock-requests/:id/tracking", verifyToken, requireRole("distributor", "admin"), (req, res) => {
+  const db = getDB();
+  const request = db.stockRequests.find((r) => r.id === Number(req.params.id));
+  if (!request) return res.status(404).json({ error: "Stock request not found." });
+  res.json(calculateShipmentTracking(request));
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/vendor", vendorRoutes);
 app.use("/api/distributor", distributorRoutes);
@@ -137,12 +141,10 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/blockchain", blockchainRoutes);
 app.use("/api/client", clientRoutes);
 
-// 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: `Route not found: ${req.method} ${req.path}` });
 });
 
-// centralized error handler
 app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ error: "Internal server error. Please try again." });
