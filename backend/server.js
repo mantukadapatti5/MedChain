@@ -15,6 +15,7 @@ const distributorRoutes = require("./routes/distributor");
 const adminRoutes = require("./routes/admin");
 const blockchainRoutes = require("./routes/blockchain");
 const clientRoutes = require("./routes/client");
+const notificationRoutes = require("./routes/notifications");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -123,16 +124,15 @@ app.post("/api/admin/anomalies/scan", verifyToken, requireRole("admin"), (req, r
 });
 
 // ---------- Level 1: GPS distance + ETA ----------
-// Uses the existing simulated GPS trail. No hardware or external maps API is
-// required: distance is calculated with the Haversine formula and ETA is
-// derived from the observed GPS speed, with a documented fallback speed when
-// timestamps are too close to infer a reliable speed.
 app.get("/api/distributor/stock-requests/:id/tracking", verifyToken, requireRole("distributor", "admin"), (req, res) => {
   const db = getDB();
   const request = db.stockRequests.find((r) => r.id === Number(req.params.id));
   if (!request) return res.status(404).json({ error: "Stock request not found." });
   res.json(calculateShipmentTracking(request));
 });
+
+// ---------- Level 1: persistent notification history ----------
+app.use("/api/notifications", notificationRoutes);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/vendor", vendorRoutes);
