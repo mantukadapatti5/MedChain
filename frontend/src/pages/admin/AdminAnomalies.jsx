@@ -59,7 +59,7 @@ export default function AdminAnomalies() {
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div>
           <h2 className="font-display text-lg font-semibold text-ink-900">Anomaly Case Management</h2>
-          <p className="text-sm text-slate-500">ML-detected near-expiry, low-stock, counterfeit &amp; cold-chain cases.</p>
+          <p className="text-sm text-slate-500">Isolation Forest detects unusual inventory patterns; compliance rules remain separate.</p>
         </div>
         <button onClick={scan} disabled={scanning} className="btn bg-admin text-white hover:bg-admin/90">
           {scanning ? <Loader2 size={16} className="animate-spin" /> : <ScanSearch size={16} />}
@@ -69,7 +69,7 @@ export default function AdminAnomalies() {
 
       {data.length === 0 ? (
         <div className="card p-8 text-center text-sm text-slate-500">
-          No anomaly cases yet. Run a scan to check inventory across both portals.
+          No anomaly cases yet. Run an Isolation Forest scan to check current inventory.
         </div>
       ) : (
         <div className="card overflow-x-auto">
@@ -80,6 +80,7 @@ export default function AdminAnomalies() {
                 <th>Type</th>
                 <th>Drug</th>
                 <th>Batch</th>
+                <th>ML Score</th>
                 <th>Severity</th>
                 <th>Source</th>
                 <th>Status</th>
@@ -94,6 +95,11 @@ export default function AdminAnomalies() {
                   <td className="capitalize">{a.type.replaceAll("-", " ")}</td>
                   <td className="font-medium text-ink-900">{a.drugName}</td>
                   <td className="font-mono text-xs text-slate-500">{a.batch}</td>
+                  <td className="font-mono text-xs">
+                    {a.model === "Isolation Forest" && Number.isFinite(Number(a.anomalyScore))
+                      ? Number(a.anomalyScore).toFixed(2)
+                      : "—"}
+                  </td>
                   <td><Badge value={a.severity} /></td>
                   <td className="capitalize text-slate-500">{a.source}</td>
                   <td><Badge value={a.status} /></td>
