@@ -13,6 +13,9 @@ export default function AdminLevel2() {
   const [suppliers, setSuppliers] = useState([]);
   const [batch, setBatch] = useState("");
   const [verification, setVerification] = useState(null);
+  const [regional, setRegional] = useState(null);
+  const [regionalDrug, setRegionalDrug] = useState("");
+  const [regionalRegion, setRegionalRegion] = useState("");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -29,6 +32,16 @@ export default function AdminLevel2() {
     setMessage("");
     try { setScenario(await api.post("/level2/scenarios", { drugName, demandIncreasePercent: Number(increase), daysAhead: 7 })); }
     catch (e) { setMessage(e.message); }
+  }
+
+  async function runRegionalForecast() {
+    setMessage("");
+    try {
+      const query = new URLSearchParams({ days: "7" });
+      if (regionalDrug) query.set("drugName", regionalDrug);
+      if (regionalRegion) query.set("region", regionalRegion);
+      setRegional(await api.get(`/level2/regional-forecast?${query.toString()}`));
+    } catch (e) { setMessage(e.message); }
   }
 
   async function executeTransfer(row) {
@@ -52,12 +65,17 @@ export default function AdminLevel2() {
     catch (e) { setMessage(e.message); }
   }
 
-  return <div className="space-y-6">
-    <div><h1 className="text-2xl font-bold">Level 2 — Intelligent Supply Chain</h1><p className="text-slate-500">Four practical features built on the existing MedChain ML, inventory and blockchain systems.</p></div>
-    {message && <div className="rounded-xl bg-slate-100 p-3 text-sm">{message}</div>}
-    <div className="flex flex-wrap gap-2">{[["scenario","What-If Simulator"],["redistribution","Stock Redistribution"],["suppliers","Multi-Vendor"],["qr","QR Batch Verification"]].map(([id,label]) => <button key={id} onClick={() => setTab(id)} className={`rounded-xl px-4 py-2 text-sm font-semibold ${tab === id ? "bg-slate-900 text-white" : "bg-slate-100"}`}>{label}</button>)}</div>
+  const drugs = [...new Set(inventory.map(x => x.drugName).filter(Boolean))];
+  const regions = [...new Set(inventory.map(x => x.region).filter(Boolean))];
 
-    {tab === "scenario" && <section className={card}><h2 className="text-lg font-bold">What-If Demand Simulator</h2><p className="mt-1 text-sm text-slate-500">Ask the existing ML models what happens if demand changes.</p><div className="mt-4 grid gap-3 md:grid-cols-3"><select className="rounded-xl border p-3" value={drugName} onChange={e => setDrugName(e.target.value)}>{[...new Set(inventory.map(x => x.drugName).filter(Boolean))].map(x => <option key={x}>{x}</option>)}</select><input className="rounded-xl border p-3" type="number" value={increase} onChange={e => setIncrease(e.target.value)} placeholder="Demand %"/><button className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white" onClick={runScenario}>Run Scenario</button></div>{scenario && <div className="mt-5 grid gap-3 md:grid-cols-4"><div className="rounded-xl bg-slate-50 p-4"><b>Normal forecast</b><div className="text-2xl">{scenario.baselineForecast}</div></div><div className="rounded-xl bg-slate-50 p-4"><b>Scenario forecast</b><div className="text-2xl">{scenario.scenarioForecast}</div></div><div className="rounded-xl bg-slate-50 p-4"><b>Shortage probability</b><div className="text-2xl">{scenario.scenarioShortageProbability ?? "—"}%</div></div><div className="rounded-xl bg-slate-50 p-4"><b>Risk</b><div className="text-2xl uppercase">{scenario.scenarioRiskLevel || "—"}</div></div></div>}</section>}
+  return <div className="space-y-6">
+    <div><h1 className="text-2xl font-bold">Level 2 — Intelligent Supply Chain</h1><p className="text-slate-500">Five practical features built on the existing MedChain ML, inventory and blockchain systems.</p></div>
+    {message && <div className="rounded-xl bg-slate-100 p-3 text-sm">{message}</div>}
+    <div className="flex flex-wrap gap-2">{[["scenario","What-If Simulator"],["regional","Hospital / Regional Forecast"],["redistribution","Stock Redistribution"],["suppliers","Multi-Vendor"],["qr","QR Batch Verification"]].map(([id,label]) => <button key={id} onClick={() => setTab(id)} className={`rounded-xl px-4 py-2 text-sm font-semibold ${tab === id ? "bg-slate-900 text-white" : "bg-slate-100"}`}>{label}</button>)}</div>
+
+    {tab === "scenario" && <section className={card}><h2 className="text-lg font-bold">What-If Demand Simulator</h2><p className="mt-1 text-sm text-slate-500">Ask the existing ML models what happens if demand changes.</p><div className="mt-4 grid gap-3 md:grid-cols-3"><select className="rounded-xl border p-3" value={drugName} onChange={e => setDrugName(e.target.value)}>{drugs.map(x => <option key={x}>{x}</option>)}</select><input className="rounded-xl border p-3" type="number" value={increase} onChange={e => setIncrease(e.target.value)} placeholder="Demand %"/><button className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white" onClick={runScenario}>Run Scenario</button></div>{scenario && <div className="mt-5 grid gap-3 md:grid-cols-4"><div className="rounded-xl bg-slate-50 p-4"><b>Normal forecast</b><div className="text-2xl">{scenario.baselineForecast}</div></div><div className="rounded-xl bg-slate-50 p-4"><b>Scenario forecast</b><div className="text-2xl">{scenario.scenarioForecast}</div></div><div className="rounded-xl bg-slate-50 p-4"><b>Shortage probability</b><div className="text-2xl">{scenario.scenarioShortageProbability ?? "—"}%</div></div><div className="rounded-xl bg-slate-50 p-4"><b>Risk</b><div className="text-2xl uppercase">{scenario.scenarioRiskLevel || "—"}</div></div></div>}</section>}
+
+    {tab === "regional" && <section className={card}><h2 className="text-lg font-bold">Hospital & Regional Demand Forecast</h2><p className="mt-1 text-sm text-slate-500">Forecast medicine demand separately for each hospital/client and region, then highlight where stock may become insufficient.</p><div className="mt-4 grid gap-3 md:grid-cols-3"><select className="rounded-xl border p-3" value={regionalDrug} onChange={e => setRegionalDrug(e.target.value)}><option value="">All medicines</option>{drugs.map(x => <option key={x}>{x}</option>)}</select><select className="rounded-xl border p-3" value={regionalRegion} onChange={e => setRegionalRegion(e.target.value)}><option value="">All regions</option>{regions.map(x => <option key={x}>{x}</option>)}</select><button className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white" onClick={runRegionalForecast}>Generate 7-Day Forecast</button></div>{regional && <><div className="mt-5 grid gap-3 md:grid-cols-4">{regional.regionSummary?.slice(0,4).map(r => <div key={r.region} className="rounded-xl bg-slate-50 p-4"><div className="text-xs text-slate-500">{r.region}</div><div className="text-xl font-bold">{r.forecastDemand}</div><div className="text-xs">forecast units · {r.criticalItems} critical</div></div>)}</div><div className="mt-5 overflow-x-auto"><table className="w-full text-left text-sm"><thead><tr className="border-b"><th className="p-3">Hospital / Client</th><th className="p-3">Region</th><th className="p-3">Medicine</th><th className="p-3">Stock</th><th className="p-3">7-Day Forecast</th><th className="p-3">Days Supply</th><th className="p-3">Risk</th><th className="p-3">Source</th></tr></thead><tbody>{(regional.results || []).map((r, i) => <tr key={`${r.clientId}-${r.drugName}-${i}`} className="border-b"><td className="p-3 font-semibold">{r.clientName}</td><td className="p-3">{r.region}</td><td className="p-3">{r.drugName}</td><td className="p-3">{r.currentStock}</td><td className="p-3">{r.forecastDemand}</td><td className="p-3">{r.daysOfSupply ?? "—"}</td><td className="p-3 font-semibold uppercase">{r.shortageRisk}</td><td className="p-3 text-xs text-slate-500">{r.model}</td></tr>)}</tbody></table></div></>}</section>}
 
     {tab === "redistribution" && <section className={card}><h2 className="text-lg font-bold">Automatic Stock Redistribution</h2><p className="mt-1 text-sm text-slate-500">Move surplus medicine to a lower-stock region before buying new stock.</p><div className="mt-4 space-y-3">{redistribution.length ? redistribution.map(row => <div key={row.id} className="flex flex-col gap-3 rounded-xl border p-4 md:flex-row md:items-center md:justify-between"><div><b>{row.drugName}</b><div className="text-sm text-slate-500">{row.fromRegion} ({row.fromStock}) → {row.toRegion} ({row.toStock}) · Suggested: {row.suggestedQty} units</div></div><button className="rounded-xl bg-slate-900 px-4 py-2 text-white" onClick={() => executeTransfer(row)}>Execute Transfer</button></div>) : <div className="rounded-xl bg-slate-50 p-4 text-slate-500">No redistribution is currently recommended.</div>}</div></section>}
 
