@@ -19,10 +19,16 @@ function createNotification({
   relatedBatch = null,
   relatedRequestId = null,
   actionPath = null,
+  eventKey = null,
 }) {
   const db = getDB();
   const notifications = ensureStore(db);
   if (!title || !message) throw new Error("Notification title and message are required.");
+
+  if (eventKey) {
+    const existing = notifications.find((n) => n.eventKey === eventKey && (userId == null || Number(n.userId) === Number(userId)) && (role == null || n.role === role));
+    if (existing) return existing;
+  }
 
   const normalizedType = VALID_TYPES.includes(type) ? type : "SYSTEM";
   const normalizedSeverity = VALID_SEVERITIES.includes(severity) ? severity : "info";
@@ -38,6 +44,7 @@ function createNotification({
     relatedBatch,
     relatedRequestId,
     actionPath,
+    eventKey,
     read: false,
     createdAt: new Date().toISOString(),
     readAt: null,
