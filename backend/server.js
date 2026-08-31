@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const { load } = require("./utils/store");
+const { load, getDB, getChain, save, nextId } = require("./utils/store");
 const eventBus = require("./utils/eventBus");
-const { verifyToken } = require("./middleware/auth");
+const { verifyToken, requireRole } = require("./middleware/auth");
 const { issueTicket, consumeTicket } = require("./utils/sseTickets");
+const { scanInventoryWithIsolationForest } = require("./ml/anomalyDetector");
 
 load(); // initialize JSON "database" + blockchain ledger
 
@@ -31,19 +32,10 @@ app.get("/api/health", (req, res) => {
 });
 
 // ---------- Real-time push (Server-Sent Events) ----------
-// EventSource can't send an Authorization header, so a normal authenticated
-// request first exchanges the person's real login token for a short-lived,
-// single-use ticket (see utils/sseTickets.js) — that ticket, never the real
-// token, is what travels in the SSE connection's URL.
 app.post("/api/events/ticket", verifyToken, (req, res) => {
   res.json({ ticket: issueTicket(req.user) });
 });
 
-// Every browser tab across all four portals opens one of these connections.
-// Whenever anything changes (see utils/store.js -> save()), every connected
-// tab gets a ping within a second and refreshes its own data — this is what
-// makes cross-portal updates genuinely real-time instead of "wait up to N
-// seconds for the next poll."
 app.get("/api/events", (req, res) => {
   const user = consumeTicket(req.query.ticket || "");
   if (!user) {
@@ -59,13 +51,82 @@ app.get("/api/events", (req, res) => {
 
   const ping = () => res.write(`data: update\n\n`);
   eventBus.on("update", ping);
-
-  // heartbeat so proxies/browsers don't time out an idle connection
   const heartbeat = setInterval(() => res.write(": heartbeat\n\n"), 20000);
 
   req.on("close", () => {
     eventBus.off("update", ping);
     clearInterval(heartbeat);
+  });
+});
+
+// ---------- Level 1: real Isolation Forest anomaly scan ----------
+// This route intentionally sits before the existing admin router so the
+// existing Admin "Run ML Anomaly Scan" button now executes the real model.
+// Existing deterministic checks remain available elsewhere for expiry,
+// counterfeit and compliance-specific rules; this ML scan adds a learned
+// unsupervised anomaly signal instead of replacing those safety checks.
+app.post("/api/admin/anomalies/scan", verifyToken, requireRole("admin"), (req, res) => {
+  const db = getDB();
+  const inventories = [
+    ["vendor", db.vendorInventory || []],
+    ["distributor", db.distributorInventory || []],
+    ["client", db.clientInventory || []],
+  ];
+  const allItems = inventories.flatMap(([portal, items]) => items.map((item) => ({ portal, item })));
+  const salesHistory = db.sales || [];
+
+  if (allItems.length < 3) {
+    return res.status(400).json({ error: "At least 3 inventory records are required for Isolation Forest scanning." });
+  }
+
+  const results = scanInventoryWithIsolationForest(allItems.map((x) => x.item), salesHistory);
+  const created = [];
+
+  results.forEach((result, index) => {
+    if (!result.anomaly) return;
+    const { portal, item } = allItems[index];
+    const type = "ml-inventory-anomaly";
+    const alreadyOpen = db.anomalies.some(
+      (a) => a.batch === item.batch && a.type === type && (a.status === "open" || a.status === "investigating")
+    );
+    if (alreadyOpen) return;
+
+    const anomaly = {
+      id: nextId("anomalies"),
+      type,
+      drugName: item.drugName,
+      batch: item.batch,
+      severity: result.severity,
+      detectedAt: new Date().toISOString(),
+      status: "open",
+      source: portal,
+      message: result.reason,
+      model: "Isolation Forest",
+      anomalyScore: result.score,
+      features: result.features,
+    };
+    db.anomalies.push(anomaly);
+    created.push(anomaly);
+
+    getChain().addBlock("ANOMALY_DETECTED", "system:isolation-forest", {
+      portal,
+      drugName: item.drugName,
+      batch: item.batch,
+      severity: result.severity,
+      anomalyScore: result.score,
+      model: "Isolation Forest",
+    });
+  });
+
+  if (created.length) save();
+  res.json({
+    model: "Isolation Forest",
+    scannedRecords: allItems.length,
+    anomaliesFound: results.filter((r) => r.anomaly).length,
+    created,
+    message: created.length
+      ? `${created.length} new ML anomaly case(s) raised by Isolation Forest.`
+      : "Isolation Forest found no new unusual inventory patterns.",
   });
 });
 
@@ -81,8 +142,7 @@ app.use((req, res) => {
   res.status(404).json({ error: `Route not found: ${req.method} ${req.path}` });
 });
 
-// centralized error handler — every route action is wrapped so a bad
-// request never crashes the process or leaves a portal hanging
+// centralized error handler
 app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ error: "Internal server error. Please try again." });
