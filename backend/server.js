@@ -6,6 +6,7 @@ const { verifyToken, requireRole } = require("./middleware/auth");
 const { issueTicket, consumeTicket } = require("./utils/sseTickets");
 const { scanInventoryWithIsolationForest } = require("./ml/anomalyDetector");
 const { calculateShipmentTracking } = require("./utils/geo");
+const { createNotification } = require("./utils/notifications");
 
 load(); // initialize JSON "database" + blockchain ledger
 
@@ -108,6 +109,19 @@ app.post("/api/admin/anomalies/scan", verifyToken, requireRole("admin"), (req, r
       severity: result.severity,
       anomalyScore: result.score,
       model: "Isolation Forest",
+    });
+
+    // Persist a user-facing alert at the same moment as the ML anomaly.
+    // The SSE event emitted by save() later makes connected clients refresh.
+    createNotification({
+      role: "admin",
+      type: "ANOMALY",
+      severity: result.severity,
+      title: `ML anomaly detected: ${item.drugName}`,
+      message: result.reason,
+      relatedDrug: item.drugName,
+      relatedBatch: item.batch,
+      actionPath: "/admin/anomalies",
     });
   });
 
