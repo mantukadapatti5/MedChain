@@ -1,130 +1,16 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { LayoutDashboard, Boxes, ClipboardList, Receipt, BrainCircuit, Truck, ShoppingCart, Users, Link2, ShieldAlert, FileBarChart2, Snowflake, AlertOctagon, Building2, Siren, Bell } from "lucide-react";
-
+import { LayoutDashboard, Boxes, ClipboardList, Receipt, BrainCircuit, Truck, ShoppingCart, Users, Link2, ShieldAlert, FileBarChart2, Snowflake, AlertOctagon, Building2, Siren, Bell, Sparkles } from "lucide-react";
 import { useAuth } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PortalLayout from "./components/PortalLayout";
 import Login from "./pages/Login";
-
-import VendorDashboard from "./pages/vendor/VendorDashboard";
-import VendorInventory from "./pages/vendor/VendorInventory";
-import VendorRequests from "./pages/vendor/VendorRequests";
-import VendorColdChain from "./pages/vendor/VendorColdChain";
-import VendorBilling from "./pages/vendor/VendorBilling";
-import VendorAnalytics from "./pages/vendor/VendorAnalytics";
-
-import DistributorDashboard from "./pages/distributor/DistributorDashboard";
-import DistributorRequests from "./pages/distributor/DistributorRequests";
-import DistributorInventory from "./pages/distributor/DistributorInventory";
-import DistributorSales from "./pages/distributor/DistributorSales";
-import DistributorClients from "./pages/distributor/DistributorClients";
-import DistributorClientRequests from "./pages/distributor/DistributorClientRequests";
-
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import AdminUsers from "./pages/admin/AdminUsers";
-import BlockchainExplorer from "./pages/admin/BlockchainExplorer";
-import AdminAnomalies from "./pages/admin/AdminAnomalies";
-import AdminShortageRisk from "./pages/admin/AdminShortageRisk";
-import AdminAuditReports from "./pages/admin/AdminAuditReports";
-import AdminRecalls from "./pages/admin/AdminRecalls";
-import Notifications from "./pages/Notifications";
-
-import ClientDashboard from "./pages/client/ClientDashboard";
-import ClientRequests from "./pages/client/ClientRequests";
-import ClientInventory from "./pages/client/ClientInventory";
-
-const vendorNav = [
-  { path: "/vendor", end: true, label: "Dashboard", icon: LayoutDashboard },
-  { path: "/vendor/inventory", label: "Inventory", icon: Boxes },
-  { path: "/vendor/requests", label: "Incoming Requests", icon: ClipboardList },
-  { path: "/vendor/cold-chain", label: "Cold Chain", icon: Snowflake },
-  { path: "/vendor/billing", label: "Billing", icon: Receipt },
-  { path: "/vendor/analytics", label: "Demand Forecast", icon: BrainCircuit },
-  { path: "/vendor/notifications", label: "Notifications", icon: Bell },
-];
-
-const distributorNav = [
-  { path: "/distributor", end: true, label: "Dashboard", icon: LayoutDashboard },
-  { path: "/distributor/requests", label: "Vendor Requests", icon: Truck },
-  { path: "/distributor/clients", label: "Clients", icon: Building2 },
-  { path: "/distributor/client-requests", label: "Client Requests", icon: ClipboardList },
-  { path: "/distributor/inventory", label: "Inventory", icon: Boxes },
-  { path: "/distributor/sales", label: "Sales", icon: ShoppingCart },
-  { path: "/distributor/notifications", label: "Notifications", icon: Bell },
-];
-
-const adminNav = [
-  { path: "/admin", end: true, label: "System Health", icon: LayoutDashboard },
-  { path: "/admin/users", label: "User & Role Mgmt", icon: Users },
-  { path: "/admin/blockchain", label: "Blockchain Explorer", icon: Link2 },
-  { path: "/admin/anomalies", label: "Anomaly Cases", icon: ShieldAlert },
-  { path: "/admin/shortage-risk", label: "Shortage Risk", icon: AlertOctagon },
-  { path: "/admin/recalls", label: "Recalls", icon: Siren },
-  { path: "/admin/reports", label: "Audit Reports", icon: FileBarChart2 },
-  { path: "/admin/notifications", label: "Notifications", icon: Bell },
-];
-
-const clientNav = [
-  { path: "/client", end: true, label: "Dashboard", icon: LayoutDashboard },
-  { path: "/client/requests", label: "My Requests", icon: ClipboardList },
-  { path: "/client/inventory", label: "My Inventory", icon: Boxes },
-  { path: "/client/notifications", label: "Notifications", icon: Bell },
-];
-
-function NotificationRoute({ role }) {
-  return (
-    <ProtectedRoute role={role}>
-      <Notifications />
-    </ProtectedRoute>
-  );
-}
-
-export default function App() {
-  const { user } = useAuth();
-
-  return (
-    <Routes>
-      <Route path="/login" element={user ? <Navigate to={`/${user.role}`} replace /> : <Login />} />
-
-      <Route path="/vendor" element={<ProtectedRoute role="vendor"><PortalLayout portal="vendor" navItems={vendorNav} pageTitle="Vendor Portal" /></ProtectedRoute>}>
-        <Route index element={<VendorDashboard />} />
-        <Route path="inventory" element={<VendorInventory />} />
-        <Route path="requests" element={<VendorRequests />} />
-        <Route path="cold-chain" element={<VendorColdChain />} />
-        <Route path="billing" element={<VendorBilling />} />
-        <Route path="analytics" element={<VendorAnalytics />} />
-        <Route path="notifications" element={<NotificationRoute role="vendor" />} />
-      </Route>
-
-      <Route path="/distributor" element={<ProtectedRoute role="distributor"><PortalLayout portal="distributor" navItems={distributorNav} pageTitle="Distributor Portal" /></ProtectedRoute>}>
-        <Route index element={<DistributorDashboard />} />
-        <Route path="requests" element={<DistributorRequests />} />
-        <Route path="clients" element={<DistributorClients />} />
-        <Route path="client-requests" element={<DistributorClientRequests />} />
-        <Route path="inventory" element={<DistributorInventory />} />
-        <Route path="sales" element={<DistributorSales />} />
-        <Route path="notifications" element={<NotificationRoute role="distributor" />} />
-      </Route>
-
-      <Route path="/admin" element={<ProtectedRoute role="admin"><PortalLayout portal="admin" navItems={adminNav} pageTitle="Admin / Regulator Portal" /></ProtectedRoute>}>
-        <Route index element={<AdminDashboard />} />
-        <Route path="users" element={<AdminUsers />} />
-        <Route path="blockchain" element={<BlockchainExplorer />} />
-        <Route path="anomalies" element={<AdminAnomalies />} />
-        <Route path="shortage-risk" element={<AdminShortageRisk />} />
-        <Route path="recalls" element={<AdminRecalls />} />
-        <Route path="reports" element={<AdminAuditReports />} />
-        <Route path="notifications" element={<NotificationRoute role="admin" />} />
-      </Route>
-
-      <Route path="/client" element={<ProtectedRoute role="client"><PortalLayout portal="client" navItems={clientNav} pageTitle="Client Portal" /></ProtectedRoute>}>
-        <Route index element={<ClientDashboard />} />
-        <Route path="requests" element={<ClientRequests />} />
-        <Route path="inventory" element={<ClientInventory />} />
-        <Route path="notifications" element={<NotificationRoute role="client" />} />
-      </Route>
-
-      <Route path="*" element={<Navigate to={user ? `/${user.role}` : "/login"} replace />} />
-    </Routes>
-  );
-}
+import VendorDashboard from "./pages/vendor/VendorDashboard"; import VendorInventory from "./pages/vendor/VendorInventory"; import VendorRequests from "./pages/vendor/VendorRequests"; import VendorColdChain from "./pages/vendor/VendorColdChain"; import VendorBilling from "./pages/vendor/VendorBilling"; import VendorAnalytics from "./pages/vendor/VendorAnalytics";
+import DistributorDashboard from "./pages/distributor/DistributorDashboard"; import DistributorRequests from "./pages/distributor/DistributorRequests"; import DistributorInventory from "./pages/distributor/DistributorInventory"; import DistributorSales from "./pages/distributor/DistributorSales"; import DistributorClients from "./pages/distributor/DistributorClients"; import DistributorClientRequests from "./pages/distributor/DistributorClientRequests";
+import AdminDashboard from "./pages/admin/AdminDashboard"; import AdminUsers from "./pages/admin/AdminUsers"; import BlockchainExplorer from "./pages/admin/BlockchainExplorer"; import AdminAnomalies from "./pages/admin/AdminAnomalies"; import AdminShortageRisk from "./pages/admin/AdminShortageRisk"; import AdminAuditReports from "./pages/admin/AdminAuditReports"; import AdminRecalls from "./pages/admin/AdminRecalls"; import AdminLevel2 from "./pages/admin/AdminLevel2"; import Notifications from "./pages/Notifications";
+import ClientDashboard from "./pages/client/ClientDashboard"; import ClientRequests from "./pages/client/ClientRequests"; import ClientInventory from "./pages/client/ClientInventory";
+const vendorNav=[{path:"/vendor",end:true,label:"Dashboard",icon:LayoutDashboard},{path:"/vendor/inventory",label:"Inventory",icon:Boxes},{path:"/vendor/requests",label:"Incoming Requests",icon:ClipboardList},{path:"/vendor/cold-chain",label:"Cold Chain",icon:Snowflake},{path:"/vendor/billing",label:"Billing",icon:Receipt},{path:"/vendor/analytics",label:"Demand Forecast",icon:BrainCircuit},{path:"/vendor/notifications",label:"Notifications",icon:Bell}];
+const distributorNav=[{path:"/distributor",end:true,label:"Dashboard",icon:LayoutDashboard},{path:"/distributor/requests",label:"Vendor Requests",icon:Truck},{path:"/distributor/clients",label:"Clients",icon:Building2},{path:"/distributor/client-requests",label:"Client Requests",icon:ClipboardList},{path:"/distributor/inventory",label:"Inventory",icon:Boxes},{path:"/distributor/sales",label:"Sales",icon:ShoppingCart},{path:"/distributor/notifications",label:"Notifications",icon:Bell}];
+const adminNav=[{path:"/admin",end:true,label:"System Health",icon:LayoutDashboard},{path:"/admin/users",label:"User & Role Mgmt",icon:Users},{path:"/admin/blockchain",label:"Blockchain Explorer",icon:Link2},{path:"/admin/anomalies",label:"Anomaly Cases",icon:ShieldAlert},{path:"/admin/shortage-risk",label:"Shortage Risk",icon:AlertOctagon},{path:"/admin/level2",label:"Level 2 Intelligence",icon:Sparkles},{path:"/admin/recalls",label:"Recalls",icon:Siren},{path:"/admin/reports",label:"Audit Reports",icon:FileBarChart2},{path:"/admin/notifications",label:"Notifications",icon:Bell}];
+const clientNav=[{path:"/client",end:true,label:"Dashboard",icon:LayoutDashboard},{path:"/client/requests",label:"My Requests",icon:ClipboardList},{path:"/client/inventory",label:"My Inventory",icon:Boxes},{path:"/client/notifications",label:"Notifications",icon:Bell}];
+function NotificationRoute({role}){return <ProtectedRoute role={role}><Notifications/></ProtectedRoute>}
+export default function App(){const {user}=useAuth();return <Routes><Route path="/login" element={user?<Navigate to={`/${user.role}`} replace/>:<Login/>}/><Route path="/vendor" element={<ProtectedRoute role="vendor"><PortalLayout portal="vendor" navItems={vendorNav} pageTitle="Vendor Portal"/></ProtectedRoute>}><Route index element={<VendorDashboard/>}/><Route path="inventory" element={<VendorInventory/>}/><Route path="requests" element={<VendorRequests/>}/><Route path="cold-chain" element={<VendorColdChain/>}/><Route path="billing" element={<VendorBilling/>}/><Route path="analytics" element={<VendorAnalytics/>}/><Route path="notifications" element={<NotificationRoute role="vendor"/>}/></Route><Route path="/distributor" element={<ProtectedRoute role="distributor"><PortalLayout portal="distributor" navItems={distributorNav} pageTitle="Distributor Portal"/></ProtectedRoute>}><Route index element={<DistributorDashboard/>}/><Route path="requests" element={<DistributorRequests/>}/><Route path="clients" element={<DistributorClients/>}/><Route path="client-requests" element={<DistributorClientRequests/>}/><Route path="inventory" element={<DistributorInventory/>}/><Route path="sales" element={<DistributorSales/>}/><Route path="notifications" element={<NotificationRoute role="distributor"/>}/></Route><Route path="/admin" element={<ProtectedRoute role="admin"><PortalLayout portal="admin" navItems={adminNav} pageTitle="Admin / Regulator Portal"/></ProtectedRoute>}><Route index element={<AdminDashboard/>}/><Route path="users" element={<AdminUsers/>}/><Route path="blockchain" element={<BlockchainExplorer/>}/><Route path="anomalies" element={<AdminAnomalies/>}/><Route path="shortage-risk" element={<AdminShortageRisk/>}/><Route path="level2" element={<AdminLevel2/>}/><Route path="recalls" element={<AdminRecalls/>}/><Route path="reports" element={<AdminAuditReports/>}/><Route path="notifications" element={<NotificationRoute role="admin"/>}/></Route><Route path="/client" element={<ProtectedRoute role="client"><PortalLayout portal="client" navItems={clientNav} pageTitle="Client Portal"/></ProtectedRoute>}><Route index element={<ClientDashboard/>}/><Route path="requests" element={<ClientRequests/>}/><Route path="inventory" element={<ClientInventory/>}/><Route path="notifications" element={<NotificationRoute role="client"/>}/></Route><Route path="*" element={<Navigate to={user?`/${user.role}`:"/login"} replace/>}/></Routes>}
