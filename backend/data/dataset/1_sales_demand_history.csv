@@ -1,0 +1,261 @@
+date,drug_name,quantity_sold,region,hospital_name,unit_price,stock_available,lead_time_days,batch_id
+2024-01-01,Amoxicillin,301,East,Lakeview General Hospital,65.46,755,7,AMO-2023-017
+2024-01-08,Amoxicillin,346,East,Lakeview General Hospital,65.13,1181,2,AMO-2025-014
+2024-01-15,Amoxicillin,362,East,Lakeview General Hospital,60.16,1168,2,AMO-2025-014
+2024-01-22,Amoxicillin,292,East,Lakeview General Hospital,65.84,882,2,AMO-2025-014
+2024-01-29,Amoxicillin,348,East,Lakeview General Hospital,65.11,826,4,AMO-2025-014
+2024-02-05,Amoxicillin,379,East,Lakeview General Hospital,59.91,486,1,AMO-2025-014
+2024-02-12,Amoxicillin,336,East,Lakeview General Hospital,57.59,1076,4,AMO-2025-014
+2024-02-19,Amoxicillin,348,East,Lakeview General Hospital,57.54,1005,4,AMO-2025-014
+2024-02-26,Amoxicillin,337,East,Lakeview General Hospital,65.16,801,7,AMO-2025-014
+2024-03-04,Amoxicillin,360,East,Lakeview General Hospital,57.28,461,3,AMO-2025-014
+2024-03-11,Amoxicillin,348,East,Lakeview General Hospital,59.18,790,2,AMO-2025-014
+2024-03-18,Amoxicillin,353,East,Lakeview General Hospital,63.83,1091,3,AMO-2025-014
+2024-03-25,Amoxicillin,365,East,Lakeview General Hospital,64.91,955,2,AMO-2025-014
+2024-04-01,Amoxicillin,400,East,Lakeview General Hospital,61.3,1267,3,AMO-2025-014
+2024-04-08,Amoxicillin,351,East,Lakeview General Hospital,64.41,720,1,AMO-2025-014
+2024-04-15,Amoxicillin,351,East,Lakeview General Hospital,57.04,686,2,AMO-2025-014
+2024-04-22,Amoxicillin,385,East,Lakeview General Hospital,63.14,1076,4,AMO-2025-014
+2024-04-29,Amoxicillin,391,East,Lakeview General Hospital,62.21,1271,2,AMO-2025-014
+2024-05-06,Amoxicillin,341,East,Lakeview General Hospital,57.42,1213,4,AMO-2025-014
+2024-05-13,Amoxicillin,359,East,Lakeview General Hospital,60.91,582,3,AMO-2025-014
+2024-05-20,Amoxicillin,351,East,Lakeview General Hospital,64.25,586,1,AMO-2025-014
+2024-05-27,Amoxicillin,379,East,Lakeview General Hospital,65.2,613,5,AMO-2025-014
+2024-06-03,Amoxicillin,359,East,Lakeview General Hospital,57.88,611,4,AMO-2025-014
+2024-06-10,Amoxicillin,357,East,Lakeview General Hospital,57.81,784,7,AMO-2025-014
+2024-06-17,Amoxicillin,348,East,Lakeview General Hospital,64.94,461,5,AMO-2025-014
+2024-06-24,Amoxicillin,324,East,Lakeview General Hospital,58.81,1046,7,AMO-2025-014
+2024-07-01,Amoxicillin,313,East,Lakeview General Hospital,57.34,909,5,AMO-2025-014
+2024-07-08,Amoxicillin,332,East,Lakeview General Hospital,62.17,1127,1,AMO-2025-014
+2024-07-15,Amoxicillin,325,East,Lakeview General Hospital,57.43,729,1,AMO-2025-014
+2024-07-22,Amoxicillin,362,East,Lakeview General Hospital,58.08,941,2,AMO-2025-014
+2024-07-29,Amoxicillin,327,East,Lakeview General Hospital,57.02,636,7,AMO-2025-014
+2024-08-05,Amoxicillin,291,East,Lakeview General Hospital,62.7,929,5,AMO-2025-014
+2024-08-12,Amoxicillin,336,East,Lakeview General Hospital,61.77,924,1,AMO-2025-014
+2024-08-19,Amoxicillin,314,East,Lakeview General Hospital,65.73,623,7,AMO-2025-014
+2024-08-26,Amoxicillin,274,East,Lakeview General Hospital,59.46,535,1,AMO-2025-014
+2024-09-02,Amoxicillin,332,East,Lakeview General Hospital,59.42,456,2,AMO-2023-017
+2024-09-09,Amoxicillin,274,East,Lakeview General Hospital,60.67,923,3,AMO-2025-014
+2024-09-16,Amoxicillin,334,East,Lakeview General Hospital,57.1,1118,1,AMO-2023-017
+2024-09-23,Amoxicillin,324,East,Lakeview General Hospital,61.9,965,3,AMO-2023-017
+2024-09-30,Amoxicillin,296,East,Lakeview General Hospital,65.84,1139,7,AMO-2023-017
+2024-10-07,Amoxicillin,279,East,Lakeview General Hospital,60.59,684,5,AMO-2023-017
+2024-10-14,Amoxicillin,344,East,Lakeview General Hospital,60.45,578,4,AMO-2023-017
+2024-10-21,Amoxicillin,287,East,Lakeview General Hospital,64.94,513,7,AMO-2023-017
+2024-10-28,Amoxicillin,277,East,Lakeview General Hospital,59.15,870,3,AMO-2025-014
+2024-11-04,Amoxicillin,312,East,Lakeview General Hospital,65.92,595,7,AMO-2023-017
+2024-11-11,Amoxicillin,352,East,Lakeview General Hospital,57.78,1067,1,AMO-2025-014
+2024-11-18,Amoxicillin,332,East,Lakeview General Hospital,60.65,983,3,AMO-2025-014
+2024-11-25,Amoxicillin,331,East,Lakeview General Hospital,61.94,734,4,AMO-2023-017
+2024-12-02,Amoxicillin,328,East,Lakeview General Hospital,61.26,1070,4,AMO-2025-014
+2024-12-09,Amoxicillin,354,East,Lakeview General Hospital,62.33,823,2,AMO-2023-017
+2024-12-16,Amoxicillin,327,East,Lakeview General Hospital,60.2,472,4,AMO-2023-017
+2024-12-23,Amoxicillin,332,East,Lakeview General Hospital,62.52,1105,3,AMO-2023-017
+2024-01-01,Azithromycin,386,North,Apex Health Institute,44.66,1143,1,AZI-2025-003
+2024-01-08,Azithromycin,403,North,Apex Health Institute,48.76,547,4,AZI-2025-003
+2024-01-15,Azithromycin,374,North,Apex Health Institute,47.25,634,7,AZI-2025-003
+2024-01-22,Azithromycin,399,North,Apex Health Institute,45.31,483,4,AZI-2025-003
+2024-01-29,Azithromycin,408,North,Apex Health Institute,46.58,968,1,AZI-2025-003
+2024-02-05,Azithromycin,451,North,Apex Health Institute,46.24,969,5,AZI-2025-003
+2024-02-12,Azithromycin,412,North,Apex Health Institute,49.33,1115,5,AZI-2025-003
+2024-02-19,Azithromycin,374,North,Apex Health Institute,48.23,515,7,AZI-2025-003
+2024-02-26,Azithromycin,425,North,Apex Health Institute,46.86,809,5,AZI-2025-003
+2024-03-04,Azithromycin,476,North,Apex Health Institute,49.18,1048,7,AZI-2025-003
+2024-03-11,Azithromycin,426,North,Apex Health Institute,44.77,857,5,AZI-2025-003
+2024-03-18,Azithromycin,404,North,Apex Health Institute,48.47,711,7,AZI-2025-003
+2024-03-25,Azithromycin,415,North,Apex Health Institute,47.42,645,7,AZI-2025-003
+2024-04-01,Azithromycin,434,North,Apex Health Institute,46.5,940,3,AZI-2025-003
+2024-04-08,Azithromycin,433,North,Apex Health Institute,46.56,918,3,AZI-2025-003
+2024-04-15,Azithromycin,402,North,Apex Health Institute,44.28,689,5,AZI-2025-003
+2024-04-22,Azithromycin,464,North,Apex Health Institute,44.24,803,7,AZI-2025-003
+2024-04-29,Azithromycin,446,North,Apex Health Institute,44.02,1212,3,AZI-2025-003
+2024-05-06,Azithromycin,436,North,Apex Health Institute,44.28,985,2,AZI-2025-003
+2024-05-13,Azithromycin,443,North,Apex Health Institute,47.72,1125,5,AZI-2025-003
+2024-05-20,Azithromycin,456,North,Apex Health Institute,48.5,1231,1,AZI-2025-003
+2024-05-27,Azithromycin,437,North,Apex Health Institute,43.66,1032,5,AZI-2025-003
+2024-06-03,Azithromycin,428,North,Apex Health Institute,46.98,1246,5,AZI-2025-003
+2024-06-10,Azithromycin,417,North,Apex Health Institute,45.85,1199,4,AZI-2025-003
+2024-06-17,Azithromycin,411,North,Apex Health Institute,49.28,687,5,AZI-2025-003
+2024-06-24,Azithromycin,394,North,Apex Health Institute,47.98,614,3,AZI-2025-003
+2024-07-01,Azithromycin,419,North,Apex Health Institute,45.48,547,3,AZI-2025-003
+2024-07-08,Azithromycin,404,North,Apex Health Institute,42.85,1092,2,AZI-2025-003
+2024-07-15,Azithromycin,406,North,Apex Health Institute,44.77,1210,2,AZI-2025-003
+2024-07-22,Azithromycin,393,North,Apex Health Institute,48.88,562,5,AZI-2025-003
+2024-07-29,Azithromycin,387,North,Apex Health Institute,46.55,1212,3,AZI-2025-003
+2024-08-05,Azithromycin,362,North,Apex Health Institute,45.23,791,7,AZI-2025-003
+2024-08-12,Azithromycin,379,North,Apex Health Institute,48.32,584,2,AZI-2025-003
+2024-08-19,Azithromycin,420,North,Apex Health Institute,46.21,1037,3,AZI-2025-003
+2024-08-26,Azithromycin,407,North,Apex Health Institute,43.04,1105,3,AZI-2025-003
+2024-09-02,Azithromycin,375,North,Apex Health Institute,45.15,790,5,AZI-2025-003
+2024-09-09,Azithromycin,386,North,Apex Health Institute,42.98,1157,2,AZI-2025-003
+2024-09-16,Azithromycin,403,North,Apex Health Institute,45.14,1193,4,AZI-2025-003
+2024-09-23,Azithromycin,375,North,Apex Health Institute,48.41,1050,4,AZI-2025-003
+2024-09-30,Azithromycin,360,North,Apex Health Institute,48.09,939,1,AZI-2025-003
+2024-10-07,Azithromycin,365,North,Apex Health Institute,48.15,634,2,AZI-2025-003
+2024-10-14,Azithromycin,393,North,Apex Health Institute,48.65,1158,4,AZI-2025-003
+2024-10-21,Azithromycin,421,North,Apex Health Institute,46.72,757,5,AZI-2025-003
+2024-10-28,Azithromycin,384,North,Apex Health Institute,49.15,478,1,AZI-2025-003
+2024-11-04,Azithromycin,380,North,Apex Health Institute,49.46,958,5,AZI-2025-003
+2024-11-11,Azithromycin,397,North,Apex Health Institute,48.64,1296,1,AZI-2025-003
+2024-11-18,Azithromycin,379,North,Apex Health Institute,43.98,1119,7,AZI-2025-003
+2024-11-25,Azithromycin,391,North,Apex Health Institute,48.44,633,7,AZI-2025-003
+2024-12-02,Azithromycin,411,North,Apex Health Institute,45.41,1116,5,AZI-2025-003
+2024-12-09,Azithromycin,398,North,Apex Health Institute,45.19,1018,2,AZI-2025-003
+2024-12-16,Azithromycin,423,North,Apex Health Institute,48.78,1106,5,AZI-2025-003
+2024-12-23,Azithromycin,394,North,Apex Health Institute,44.18,843,7,AZI-2025-003
+2024-01-01,Insulin,389,West,Metro Community Hospital,331.7,866,3,INS-2024-009
+2024-01-08,Insulin,385,West,Metro Community Hospital,304.29,1058,4,INS-2024-009
+2024-01-15,Insulin,402,West,Metro Community Hospital,314.88,736,4,INS-2024-009
+2024-01-22,Insulin,352,West,Metro Community Hospital,334.28,1176,7,INS-2024-009
+2024-01-29,Insulin,373,West,Metro Community Hospital,317.09,732,1,INS-2024-009
+2024-02-05,Insulin,402,West,Metro Community Hospital,321.13,1069,5,INS-2024-009
+2024-02-12,Insulin,404,West,Metro Community Hospital,351.62,518,5,INS-2024-009
+2024-02-19,Insulin,382,West,Metro Community Hospital,345.87,1254,4,INS-2024-009
+2024-02-26,Insulin,367,West,Metro Community Hospital,321.42,735,2,INS-2024-009
+2024-03-04,Insulin,409,West,Metro Community Hospital,336.7,800,3,INS-2024-009
+2024-03-11,Insulin,392,West,Metro Community Hospital,328.43,1122,2,INS-2024-009
+2024-03-18,Insulin,370,West,Metro Community Hospital,345.9,1182,4,INS-2024-009
+2024-03-25,Insulin,381,West,Metro Community Hospital,306.9,806,7,INS-2024-009
+2024-04-01,Insulin,438,West,Metro Community Hospital,346.42,1319,4,INS-2024-009
+2024-04-08,Insulin,384,West,Metro Community Hospital,346.92,704,3,INS-2024-009
+2024-04-15,Insulin,359,West,Metro Community Hospital,310.51,446,7,INS-2024-007
+2024-04-22,Insulin,398,West,Metro Community Hospital,323.44,883,5,INS-2024-009
+2024-04-29,Insulin,401,West,Metro Community Hospital,348.62,1081,1,INS-2024-009
+2024-05-06,Insulin,379,West,Metro Community Hospital,318.47,774,3,INS-2024-007
+2024-05-13,Insulin,375,West,Metro Community Hospital,307.53,649,5,INS-2024-009
+2024-05-20,Insulin,381,West,Metro Community Hospital,332.08,772,5,INS-2024-007
+2024-05-27,Insulin,389,West,Metro Community Hospital,351.4,834,7,INS-2024-009
+2024-06-03,Insulin,380,West,Metro Community Hospital,338.62,529,4,INS-2024-009
+2024-06-10,Insulin,347,West,Metro Community Hospital,347.16,709,3,INS-2024-009
+2024-06-17,Insulin,340,West,Metro Community Hospital,340.41,1061,3,INS-2024-007
+2024-06-24,Insulin,354,West,Metro Community Hospital,337.81,657,1,INS-2024-007
+2024-07-01,Insulin,331,West,Metro Community Hospital,325.5,1028,3,INS-2024-009
+2024-07-08,Insulin,323,West,Metro Community Hospital,313.44,1154,1,INS-2024-007
+2024-07-15,Insulin,309,West,Metro Community Hospital,332.85,470,1,INS-2024-007
+2024-07-22,Insulin,305,West,Metro Community Hospital,338.51,390,2,INS-2024-009
+2024-07-29,Insulin,319,West,Metro Community Hospital,329.77,414,7,INS-2024-009
+2024-08-05,Insulin,274,West,Metro Community Hospital,348.3,571,3,INS-2024-009
+2024-08-12,Insulin,273,West,Metro Community Hospital,345.65,380,7,INS-2024-009
+2024-08-19,Insulin,325,West,Metro Community Hospital,323.46,1100,3,INS-2024-009
+2024-08-26,Insulin,287,West,Metro Community Hospital,306.76,791,1,INS-2024-007
+2024-09-02,Insulin,290,West,Metro Community Hospital,334.06,712,4,INS-2024-007
+2024-09-09,Insulin,284,West,Metro Community Hospital,316.34,838,1,INS-2024-009
+2024-09-16,Insulin,286,West,Metro Community Hospital,348.41,943,7,INS-2024-007
+2024-09-23,Insulin,267,West,Metro Community Hospital,306.69,975,7,INS-2024-009
+2024-09-30,Insulin,264,West,Metro Community Hospital,311.52,363,2,INS-2024-009
+2024-10-07,Insulin,282,West,Metro Community Hospital,310.85,1147,1,INS-2024-007
+2024-10-14,Insulin,288,West,Metro Community Hospital,343.07,801,3,INS-2024-009
+2024-10-21,Insulin,283,West,Metro Community Hospital,335.55,979,5,INS-2024-007
+2024-10-28,Insulin,246,West,Metro Community Hospital,315.04,959,3,INS-2024-009
+2024-11-04,Insulin,291,West,Metro Community Hospital,340.64,1165,7,INS-2024-009
+2024-11-11,Insulin,275,West,Metro Community Hospital,335.28,917,7,INS-2024-009
+2024-11-18,Insulin,292,West,Metro Community Hospital,330.85,742,5,INS-2024-009
+2024-11-25,Insulin,296,West,Metro Community Hospital,310.33,385,5,INS-2024-009
+2024-12-02,Insulin,321,West,Metro Community Hospital,308.79,1193,3,INS-2024-009
+2024-12-09,Insulin,351,West,Metro Community Hospital,351.5,664,4,INS-2024-007
+2024-12-16,Insulin,280,West,Metro Community Hospital,348.97,999,2,INS-2024-007
+2024-12-23,Insulin,311,West,Metro Community Hospital,306.89,904,2,INS-2024-007
+2024-01-01,Metformin,233,Central,St. Mary's Medical Center,43.54,1096,3,MET-2025-018
+2024-01-08,Metformin,235,Central,St. Mary's Medical Center,43.45,799,7,MET-2025-018
+2024-01-15,Metformin,225,Central,St. Mary's Medical Center,41.13,793,5,MET-2025-018
+2024-01-22,Metformin,228,Central,St. Mary's Medical Center,44.0,375,5,MET-2025-018
+2024-01-29,Metformin,244,Central,St. Mary's Medical Center,41.14,864,2,MET-2025-018
+2024-02-05,Metformin,279,Central,St. Mary's Medical Center,39.43,535,2,MET-2025-018
+2024-02-12,Metformin,261,Central,St. Mary's Medical Center,39.07,1008,1,MET-2025-018
+2024-02-19,Metformin,279,Central,St. Mary's Medical Center,40.29,797,1,MET-2025-018
+2024-02-26,Metformin,263,Central,St. Mary's Medical Center,38.92,600,4,MET-2025-018
+2024-03-04,Metformin,282,Central,St. Mary's Medical Center,40.19,1040,5,MET-2025-018
+2024-03-11,Metformin,255,Central,St. Mary's Medical Center,40.72,425,3,MET-2025-018
+2024-03-18,Metformin,262,Central,St. Mary's Medical Center,39.74,798,7,MET-2025-018
+2024-03-25,Metformin,291,Central,St. Mary's Medical Center,40.7,860,7,MET-2025-018
+2024-04-01,Metformin,282,Central,St. Mary's Medical Center,42.55,515,1,MET-2025-018
+2024-04-08,Metformin,280,Central,St. Mary's Medical Center,40.2,893,7,MET-2025-018
+2024-04-15,Metformin,280,Central,St. Mary's Medical Center,41.74,895,3,MET-2025-018
+2024-04-22,Metformin,279,Central,St. Mary's Medical Center,39.52,928,2,MET-2025-018
+2024-04-29,Metformin,286,Central,St. Mary's Medical Center,41.42,425,5,MET-2025-018
+2024-05-06,Metformin,297,Central,St. Mary's Medical Center,39.84,934,3,MET-2025-018
+2024-05-13,Metformin,264,Central,St. Mary's Medical Center,39.53,615,4,MET-2025-018
+2024-05-20,Metformin,283,Central,St. Mary's Medical Center,41.15,868,1,MET-2025-018
+2024-05-27,Metformin,309,Central,St. Mary's Medical Center,38.77,1200,3,MET-2025-018
+2024-06-03,Metformin,291,Central,St. Mary's Medical Center,43.52,1105,4,MET-2025-018
+2024-06-10,Metformin,246,Central,St. Mary's Medical Center,40.2,1055,3,MET-2025-018
+2024-06-17,Metformin,254,Central,St. Mary's Medical Center,40.59,956,3,MET-2025-018
+2024-06-24,Metformin,280,Central,St. Mary's Medical Center,39.43,952,2,MET-2025-018
+2024-07-01,Metformin,254,Central,St. Mary's Medical Center,43.87,1062,5,MET-2025-018
+2024-07-08,Metformin,204,Central,St. Mary's Medical Center,38.38,492,3,MET-2025-018
+2024-07-15,Metformin,272,Central,St. Mary's Medical Center,38.48,808,4,MET-2025-018
+2024-07-22,Metformin,261,Central,St. Mary's Medical Center,41.15,849,7,MET-2025-018
+2024-07-29,Metformin,256,Central,St. Mary's Medical Center,38.65,913,4,MET-2025-018
+2024-08-05,Metformin,204,Central,St. Mary's Medical Center,42.21,730,4,MET-2025-018
+2024-08-12,Metformin,261,Central,St. Mary's Medical Center,39.06,407,4,MET-2025-018
+2024-08-19,Metformin,240,Central,St. Mary's Medical Center,40.95,844,1,MET-2025-018
+2024-08-26,Metformin,232,Central,St. Mary's Medical Center,42.44,723,5,MET-2025-018
+2024-09-02,Metformin,192,Central,St. Mary's Medical Center,43.55,573,5,MET-2025-018
+2024-09-09,Metformin,229,Central,St. Mary's Medical Center,42.62,1097,4,MET-2025-018
+2024-09-16,Metformin,242,Central,St. Mary's Medical Center,38.54,400,5,MET-2025-018
+2024-09-23,Metformin,228,Central,St. Mary's Medical Center,38.61,398,2,MET-2025-018
+2024-09-30,Metformin,226,Central,St. Mary's Medical Center,38.33,1003,2,MET-2025-018
+2024-10-07,Metformin,235,Central,St. Mary's Medical Center,40.9,371,5,MET-2025-018
+2024-10-14,Metformin,269,Central,St. Mary's Medical Center,43.06,492,4,MET-2025-018
+2024-10-21,Metformin,231,Central,St. Mary's Medical Center,43.23,460,3,MET-2025-018
+2024-10-28,Metformin,209,Central,St. Mary's Medical Center,39.14,295,2,MET-2025-018
+2024-11-04,Metformin,246,Central,St. Mary's Medical Center,41.12,414,3,MET-2025-018
+2024-11-11,Metformin,277,Central,St. Mary's Medical Center,39.53,662,5,MET-2025-018
+2024-11-18,Metformin,277,Central,St. Mary's Medical Center,41.07,787,7,MET-2025-018
+2024-11-25,Metformin,260,Central,St. Mary's Medical Center,39.84,594,4,MET-2025-018
+2024-12-02,Metformin,234,Central,St. Mary's Medical Center,43.14,577,3,MET-2025-018
+2024-12-09,Metformin,293,Central,St. Mary's Medical Center,38.79,585,5,MET-2025-018
+2024-12-16,Metformin,303,Central,St. Mary's Medical Center,43.59,1055,4,MET-2025-018
+2024-12-23,Metformin,269,Central,St. Mary's Medical Center,40.19,1169,3,MET-2025-018
+2024-01-01,Paracetamol,199,South,Green Valley Hospital,23.9,444,4,PAR-2025-020
+2024-01-08,Paracetamol,181,South,Green Valley Hospital,26.59,420,4,PAR-2025-020
+2024-01-15,Paracetamol,181,South,Green Valley Hospital,25.82,905,7,PAR-2025-020
+2024-01-22,Paracetamol,178,South,Green Valley Hospital,25.87,491,5,PAR-2025-020
+2024-01-29,Paracetamol,177,South,Green Valley Hospital,26.44,517,4,PAR-2025-020
+2024-02-05,Paracetamol,211,South,Green Valley Hospital,27.26,405,7,PAR-2025-020
+2024-02-12,Paracetamol,201,South,Green Valley Hospital,27.13,880,5,PAR-2025-020
+2024-02-19,Paracetamol,159,South,Green Valley Hospital,27.4,936,1,PAR-2025-020
+2024-02-26,Paracetamol,227,South,Green Valley Hospital,26.72,522,3,PAR-2025-020
+2024-03-04,Paracetamol,238,South,Green Valley Hospital,25.31,1079,4,PAR-2023-014
+2024-03-11,Paracetamol,204,South,Green Valley Hospital,24.8,376,3,PAR-2023-014
+2024-03-18,Paracetamol,200,South,Green Valley Hospital,25.41,628,7,PAR-2025-020
+2024-03-25,Paracetamol,229,South,Green Valley Hospital,25.66,1001,7,PAR-2025-020
+2024-04-01,Paracetamol,231,South,Green Valley Hospital,25.36,835,2,PAR-2023-014
+2024-04-08,Paracetamol,217,South,Green Valley Hospital,26.61,341,7,PAR-2025-020
+2024-04-15,Paracetamol,181,South,Green Valley Hospital,24.4,428,7,PAR-2025-020
+2024-04-22,Paracetamol,231,South,Green Valley Hospital,25.79,566,1,PAR-2023-014
+2024-04-29,Paracetamol,237,South,Green Valley Hospital,25.09,738,1,PAR-2023-014
+2024-05-06,Paracetamol,224,South,Green Valley Hospital,26.14,444,2,PAR-2023-014
+2024-05-13,Paracetamol,174,South,Green Valley Hospital,26.26,497,7,PAR-2025-020
+2024-05-20,Paracetamol,244,South,Green Valley Hospital,23.77,1032,4,PAR-2023-014
+2024-05-27,Paracetamol,229,South,Green Valley Hospital,27.26,668,7,PAR-2023-014
+2024-06-03,Paracetamol,201,South,Green Valley Hospital,24.25,1005,2,PAR-2025-020
+2024-06-10,Paracetamol,226,South,Green Valley Hospital,25.0,426,5,PAR-2023-014
+2024-06-17,Paracetamol,200,South,Green Valley Hospital,26.6,453,7,PAR-2023-014
+2024-06-24,Paracetamol,186,South,Green Valley Hospital,26.0,738,4,PAR-2023-014
+2024-07-01,Paracetamol,186,South,Green Valley Hospital,24.18,562,1,PAR-2023-014
+2024-07-08,Paracetamol,133,South,Green Valley Hospital,25.57,257,1,PAR-2023-014
+2024-07-15,Paracetamol,204,South,Green Valley Hospital,24.89,397,7,PAR-2023-014
+2024-07-22,Paracetamol,189,South,Green Valley Hospital,25.43,384,2,PAR-2023-014
+2024-07-29,Paracetamol,165,South,Green Valley Hospital,25.42,827,3,PAR-2023-014
+2024-08-05,Paracetamol,180,South,Green Valley Hospital,24.38,333,1,PAR-2023-014
+2024-08-12,Paracetamol,143,South,Green Valley Hospital,25.51,991,4,PAR-2023-014
+2024-08-19,Paracetamol,195,South,Green Valley Hospital,26.55,614,7,PAR-2023-014
+2024-08-26,Paracetamol,131,South,Green Valley Hospital,24.16,711,4,PAR-2023-014
+2024-09-02,Paracetamol,139,South,Green Valley Hospital,24.46,775,3,PAR-2023-014
+2024-09-09,Paracetamol,144,South,Green Valley Hospital,25.1,317,7,PAR-2023-014
+2024-09-16,Paracetamol,206,South,Green Valley Hospital,26.1,1034,7,PAR-2023-014
+2024-09-23,Paracetamol,197,South,Green Valley Hospital,26.2,357,2,PAR-2023-014
+2024-09-30,Paracetamol,145,South,Green Valley Hospital,23.84,629,2,PAR-2023-014
+2024-10-07,Paracetamol,182,South,Green Valley Hospital,25.13,915,5,PAR-2023-014
+2024-10-14,Paracetamol,180,South,Green Valley Hospital,24.13,996,3,PAR-2023-014
+2024-10-21,Paracetamol,181,South,Green Valley Hospital,25.17,923,3,PAR-2023-014
+2024-10-28,Paracetamol,145,South,Green Valley Hospital,24.61,364,5,PAR-2023-014
+2024-11-04,Paracetamol,147,South,Green Valley Hospital,26.89,486,2,PAR-2023-014
+2024-11-11,Paracetamol,164,South,Green Valley Hospital,23.9,824,7,PAR-2023-014
+2024-11-18,Paracetamol,193,South,Green Valley Hospital,27.14,494,4,PAR-2023-014
+2024-11-25,Paracetamol,216,South,Green Valley Hospital,25.62,457,3,PAR-2023-014
+2024-12-02,Paracetamol,200,South,Green Valley Hospital,24.28,512,2,PAR-2023-014
+2024-12-09,Paracetamol,206,South,Green Valley Hospital,25.41,697,1,PAR-2023-014
+2024-12-16,Paracetamol,241,South,Green Valley Hospital,26.94,811,2,PAR-2023-014
+2024-12-23,Paracetamol,201,South,Green Valley Hospital,26.46,283,1,PAR-2023-014
